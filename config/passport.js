@@ -24,10 +24,10 @@ module.exports = function(passport) {
     User.load({ criteria: { _id: id } }, cb)
   );
 
-  // use these strategies
-  passport.use(local);
-  passport.use(google);
-  passport.use(twitter);
-  passport.use(linkedin);
-  passport.use(github);
+  // // use these strategies
+  // passport.use(local);
+  // passport.use(google);
+  // passport.use(twitter);
+  // passport.use(linkedin);
+  // passport.use(github);
 };
