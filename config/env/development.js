@@ -7,12 +7,13 @@
 const port = process.env.PORT || 3000;
 
 module.exports = {
-  db: process.env.MONGODB_URL || 'mongodb://localhost/noobjs_dev',
-  twitter: {
-    clientID: process.env.TWITTER_CLIENTID,
-    clientSecret: process.env.TWITTER_SECRET,
-    callbackURL: `http://localhost:${port}/auth/twitter/callback/`
-  }
+  db: process.env.MONGODB_URL || 'mongodb://localhost/noobjs_dev'
+  // ,
+  // twitter: {
+  //   clientID: process.env.TWITTER_CLIENTID,
+  //   clientSecret: process.env.TWITTER_SECRET,
+  //   callbackURL: `http://localhost:${port}/auth/twitter/callback/`
+  // }
   // ,
   // github: {
   //   clientID: process.env.GITHUB_CLIENTID,
