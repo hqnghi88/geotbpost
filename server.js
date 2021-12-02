@@ -27,6 +27,7 @@ const port = process.env.PORT || 3000;
 const app = express(); 
 app.use(csp({
   directives: {
+    defaultSrc: ["'self'"],
     frameAncestors: ["'self'",'http://geotb.herokuapp.com','https://geotb.herokuapp.com'],
     frameSrc: ["'self'", 'http://geotb.herokuapp.com','https://geotb.herokuapp.com']
   }
