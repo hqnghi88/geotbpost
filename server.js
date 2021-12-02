@@ -18,17 +18,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const config = require('./config');
+const csp = require('helmet-csp')
+
+
 
 const models = join(__dirname, 'app/models');
 const port = process.env.PORT || 3000;
-const app = express();
-app.use(function (req, res, next) {
-  res.setHeader(
-    'Content-Security-Policy-Report-Only',
-    "frame-ancestors http://geotb.herokuapp.com https://geotb.herokuapp.com; frame-src http://geotb.herokuapp.com https://geotb.herokuapp.com;"
-  );
-  next();
-});
+const app = express(); 
+app.use(csp({
+  directives: {
+    frameAncestors: ["'self'",'http://geotb.herokuapp.com','https://geotb.herokuapp.com'],
+    frameSrc: ["'self'", 'http://geotb.herokuapp.com','https://geotb.herokuapp.com']
+  }
+}))
 /**
  * Expose
  */
