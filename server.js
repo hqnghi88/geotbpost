@@ -22,7 +22,13 @@ const config = require('./config');
 const models = join(__dirname, 'app/models');
 const port = process.env.PORT || 3000;
 const app = express();
-
+app.use(function (req, res, next) {
+  res.setHeader(
+    'Content-Security-Policy',
+    "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-src 'https://geotb.herokuapp.com/'"
+  );
+  next();
+});
 /**
  * Expose
  */
