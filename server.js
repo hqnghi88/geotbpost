@@ -25,7 +25,7 @@ const app = express();
 app.use(function (req, res, next) {
   res.setHeader(
     'Content-Security-Policy-Report-Only',
-    "frame-ancestors 'self' http://geotb.herokuapp.com https://geotb.herokuapp.com; frame-src 'self' http://geotb.herokuapp.com https://geotb.herokuapp.com;"
+    "frame-ancestors 'self' http://localhost/ http://geotb.herokuapp.com https://geotb.herokuapp.com; frame-src 'self' http://localhost/ http://geotb.herokuapp.com https://geotb.herokuapp.com;"
   );
   next();
 });
