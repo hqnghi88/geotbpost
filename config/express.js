@@ -37,6 +37,7 @@ module.exports = function (app, passport) {
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
+          'default-src': ["'self'", "'unsafe-inline'", 'http://localhost', 'https://geotb.herokuapp.com/'],
           'script-src-attr': ["'self'", "'unsafe-inline'", 'http://localhost', 'https://geotb.herokuapp.com/'],
           'script-src': ["'self'", 'code.jquery.com', "'unsafe-inline'", 'http://localhost', 'https://geotb.herokuapp.com/'],
           'style-src': ["'self'", "'unsafe-inline'", 'netdna.bootstrapcdn.com'],
