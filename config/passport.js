@@ -7,7 +7,7 @@
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
 
-// const local = require('./passport/local');
+const local = require('./passport/local');
 // const google = require('./passport/google');
 // const twitter = require('./passport/twitter');
 // const linkedin = require('./passport/linkedin');
@@ -24,8 +24,8 @@ module.exports = function(passport) {
     User.load({ criteria: { _id: id } }, cb)
   );
 
-  // // use these strategies
-  // passport.use(local);
+  // use these strategies
+  passport.use(local);
   // passport.use(google);
   // passport.use(twitter);
   // passport.use(linkedin);
