@@ -37,12 +37,12 @@ module.exports = function (app, passport) {
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'script-src-attr': ["'self'", "'unsafe-inline'", 'localhost', 'https://geotb.herokuapp.com/'],
-          'script-src': ["'self'", 'code.jquery.com', "'unsafe-inline'", 'localhost', 'https://geotb.herokuapp.com/'],
+          'script-src-attr': ["'self'", "'unsafe-inline'", 'http://localhost', 'https://geotb.herokuapp.com/'],
+          'script-src': ["'self'", 'code.jquery.com', "'unsafe-inline'", 'http://localhost', 'https://geotb.herokuapp.com/'],
           'style-src': ["'self'", "'unsafe-inline'", 'netdna.bootstrapcdn.com'],
           'img-src': ["'self'", 'data:', 'img.shields.io'],
-          'frame-src': ["'self'", 'localhost', 'https://geotb.herokuapp.com/', 'ghbtns.com'],
-          'frame-ancestors': ["'self'", 'localhost', 'https://geotb.herokuapp.com/', 'ghbtns.com']
+          'frame-src': ["'self'", 'http://localhost', 'https://geotb.herokuapp.com/', 'ghbtns.com'],
+          'frame-ancestors': ["'self'", 'http://localhost', 'https://geotb.herokuapp.com/', 'ghbtns.com']
         }
       }
     })
