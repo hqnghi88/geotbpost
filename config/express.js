@@ -40,8 +40,8 @@ module.exports = function (app, passport) {
           'script-src': ["'self'", 'code.jquery.com'],
           'style-src': ["'self'", "'unsafe-inline'", 'netdna.bootstrapcdn.com'],
           'img-src': ["'self'", 'data:', 'img.shields.io'],
-          'frame-src': ["'self'", "'unsafe-inline'", 'localhost', 'https://geotb.herokuapp.com/', 'ghbtns.com'],
-          'frame-ancestors': ["'self'", "'unsafe-inline'", 'localhost', 'https://geotb.herokuapp.com/', 'ghbtns.com']
+          'frame-src': ["'self'", 'localhost', 'https://geotb.herokuapp.com/', 'ghbtns.com'],
+          'frame-ancestors': ["'self'", 'localhost', 'https://geotb.herokuapp.com/', 'ghbtns.com']
         }
       }
     })
