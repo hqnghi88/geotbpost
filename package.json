@@ -1,6 +1,6 @@
 {
-  "name": "nodejs-express-mongoose-demo",
-  "description": "A demo app illustrating the usage of express, mongoose, passportjs, pug and other modules in nodejs",
+  "name": "geotb-expert-post",
+  "description": "A demo app from https://github.com/madhums/node-express-mongoose-demo.git",
   "keywords": [
     "express",
     "mongoose",
